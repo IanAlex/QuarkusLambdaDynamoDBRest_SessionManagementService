@@ -25,7 +25,7 @@ does NOT count as a write-access as well (i.e. if 'A' retrieves records from Dyn
 the Session Management Service this does NOT count as an additional access POST/write).
 			   
 
-#Steps to Build and Run the application
+# Steps to Build and Run the application
 
 (assumes Maven and Docker for DynamoDB are installed)
 
@@ -57,7 +57,7 @@ the command: sam local start-api --template target/sam.jvm.yaml
  This is done by a series of Curl POSTs and GETs as described below (with reference to 
  (iii) in the "Description and Assumptions" above
  
-#POST commands:
+# POST commands:
  
  These are used for services to simulate "access" to the Session Management Service and write
  to the DynamoDB table.
@@ -76,7 +76,7 @@ the command: sam local start-api --template target/sam.jvm.yaml
  And in the console
  where the application is running there will be some System.out.println() messages spooled.
  
-#GET commands:
+# GET commands:
  
  (I) Getting in JSON form  ALL Session Management Records accessible the calling Service.
  
@@ -122,7 +122,7 @@ the command: sam local start-api --template target/sam.jvm.yaml
 			
 			will return that record. If the record doesn't exist then return null.
 		   
-#Test Scenario:
+# Test Scenario:
 		   
 curl -X POST  http://localhost:3000/sessions/A  (run twice)
 
